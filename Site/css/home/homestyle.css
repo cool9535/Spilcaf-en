@@ -23,6 +23,7 @@ header
 }
 body 
 {
+    
     height: 100%;
     background: #000000;
     color: #ffffff;
@@ -45,8 +46,9 @@ nav a
 {
     display: block;
     text-decoration: none;
-    font-family: Impact;
-    font-size: 28px;
+    font-family: Arial;
+    font-weight:bold;
+    font-size: 26px;
     color: #ffffff;
     max-height: 100%;
 }
