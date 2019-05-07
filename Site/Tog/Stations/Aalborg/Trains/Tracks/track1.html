@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="css/style.css" type="text/css">
+<html>
+<head>
+    <meta http-equiv="refresh" content="5" />
+    <title>Train Plans</title>
+    <style type="text/css">
+        .clockStyle {
+            top: 13px;
+            font-size: 12px;
+            color: #ffffff;
+            background: #0094ff;
+            width: 160px;
+            height: 14px;
+            position: relative;
+        }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <!-- <header>
+        <h1>Train Plans</h1>
+    </header>-->
+        <!--<div class="navigationDesktop">
+                <nav>
+                    <ul>
+                        <li><a href="../../../index.html#Home">Home Page</a></li>
+                        <li><a href="#">North</a></li>
+                        <li><a href="#">South</a></li>
+                        <li><a href="#">East</a></li>
+                        <li><a href="#">West</a></li>
+                        <li><a href="#">Globally</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <h2>
+                <div id="clock"></div>
+                <script type="text/javascript" language="javascript">
+                    setInterval(renderTime, 500);
+                    function renderTime() {
+                        var currentTime = new Date();
+                        var h = currentTime.getHours();
+                        var m = currentTime.getMinutes();
+                        var s = currentTime.getSeconds();
+
+                        if (h > 23)
+                            h = 0;
+                        if (m > 59)
+                            m = 0;
+                        if (s > 59)
+                            s = 0;
+                        if (h < 10)
+                            h = "0" + h;
+                        if (m < 10)
+                            m = "0" + m;
+                        if (s < 10)
+                            s = "0" + s;
+                        document.getElementById('clock').innerHTML = h + ':' + m + '&nbsp;';
+                    }
+                    renderTime();
+                </script>
+            </h2>-->
+            <h5><div id="update">04:22</div>
+                <script type="text/javascript" language="javascript">
+                    window.onload = function updateClock(element, hrs, mns)
+                    {
+                        var currentTime = new Date();
+                        var hrs = currentTime.getHours();
+                        var mns = currentTime.getMinutes();
+                        var update = element.innerHTML;
+                        var updateClock = setInterval(update, 500);
+                        element.innerHTML = '04' + ':' + '42 &nbsp; &nbsp; Hjørring &nbsp; C&nbsp;';
+                        if (hrs > 4 && mns > 0 < 12)
+                        {
+                            element.innerHTML = hrs+':12';
+                            updateClock;
+                            update;
+                        }
+                        if (mns > 12 < 35)
+                        {
+                            element.innerHTML = 'hrs+:35;';
+                            updateClock;
+                            update;
+                        }
+                        if (hrs < 19 && mns > 34 < 46)
+                        {
+                            element.innerHTML = hrs + ':42';
+                            updateClock;
+                            update;
+                        }
+                        if (hrs < 20 && mns > 41)
+                        {
+                            element.innerHTML = hrs + ':46';
+                            updateClock;
+                            update;
+                        }
+                        if (mns < 57)
+                        {
+                            element.innerHTML = hrs + ':57';
+                            updateClock;
+                            update;
+                        }
+                        document.getElementById('updateClock').innerHTML = element.innerHTML;
+                    }
+                </script></h5>
+            <h4>
+                <div id="updateText">Frederikshavn</div>
+                <script type="text/javascript" language="javascript">
+                    window.onload = function update1(element1, hrs1, mns1)
+                    {
+                        var textTime = new Date();
+                        var hrs1 = textTime.getHours();
+                        var mns1 = textTime.getMinutes();
+                        var update2 = element.innerHTML;
+                        var updateText = setInterval(update1, 500);
+                        element1.innerHTML = '04' + ':' + '42 &nbsp; &nbsp; Hjørring &nbsp; &nbsp;';
+                        document.getElementById('updateText').innerHTML = element1.innerHTML;
+                    }
+                </script>
+            </h4>
+        <h3><div id="updateDest">Aalborg Vestby, Lindholm, Brønderslev, Vrå, Hjørring, Sindal, Tolne, Kvissel</div>
+            <script type="text/javascript" language="javascript">
+                window.onload = function updateScreen(element, hrs, mns) {
+                    var currentTime = new Date();
+                    var hrs = currentTime.getHours();
+                    var mns = currentTime.getMinutes();
+                    var updateScreen = element.innerHTML;
+                    var updater = setInterval(updateScreen1, 500);
+                    element.innerHTML = '04' + ':' + '42 &nbsp; &nbsp; Hjørring &nbsp; &nbsp;';
+                    document.getElementById('updateText').innerHTML = element.innerHTML;
+                }
+            </script></h3>
+        </div>
+    </body>
+
+    </html>

@@ -1,0 +1,141 @@
+<link rel="stylesheet" href="css/style.css" type="text/css">
+<html>
+<head>
+    <meta http-equiv="refresh" content="30" />
+    <title>Train Plans: Aalborg</title>
+    <style type="text/css">
+        .clockStyle {
+            top: 13px;
+            font-size: 12px;
+            color: #ffffff;
+            background: #0094ff;
+            width: 160px;
+            height: 14px;
+            position: relative;
+        }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <!-- <header>
+        <h1>Train Plans</h1>
+    </header>-->
+        <!--<div class="navigationDesktop">
+        <nav>
+            <ul>
+                <li><a href="../../../index.html#Home">Home Page</a></li>
+                <li><a href="#">North</a></li>
+                <li><a href="#">South</a></li>
+                <li><a href="#">East</a></li>
+                <li><a href="#">West</a></li>
+                <li><a href="#">Globally</a></li>
+            </ul>
+        </nav>
+    </div>-->
+        <h2>
+            <div id="clock"></div>
+            <script type="text/javascript" language="javascript">
+                setInterval(renderTime, 500);
+                function renderTime() {
+                    var currentTime = new Date();
+                    var h = currentTime.getHours();
+                    var m = currentTime.getMinutes();
+                    var s = currentTime.getSeconds();
+
+                    if (h > 23)
+                        h = 0;
+                    if (m > 59)
+                        m = 0;
+                    if (s > 59)
+                        s = 0;
+                    if (h < 10)
+                        h = "0" + h;
+                    if (m < 10)
+                        m = "0" + m;
+                    if (s < 10)
+                        s = "0" + s;
+                    document.getElementById('clock').innerHTML = h + ':' + m + '&nbsp;';
+                }
+                renderTime();
+            </script>
+        </h2>
+        <h5>Depart: &nbsp; &nbsp; &nbsp; &nbsp;  To: &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Track:</h5>
+        <h3>
+            <div id="updater1"></div>
+            <meta name="keywords" content="This doesn't work according to plan" />
+            <script type="text/javascript" language="javascript">
+                window.onload = function updateScreen1(element1, hrs1, mns1)
+                {
+                    var currentTime1 = new Date();
+                    var hrs1 = currentTime1.getHours();
+                    var mns1 = currentTime1.getMinutes();
+                    var updateScreen1 = element1.innerHTML
+                    var updater1 = setInterval(updateScreen1, 500);
+                    element1.innerHTML = '04' + ':' + '22 &nbsp; Frederikshavn &nbsp; &nbsp; &nbsp;1';
+                    if (hrs1 + 1 > 23)
+                        hrs1 = 0;
+                    if (hrs1 < 10)
+                    {
+                        hrs1 = "0" + hrs1;
+                        updater1;
+                    }
+                    if (hrs1 > 1 < 2 && mns1 >7)
+                    {
+                        element1.innerHTML = hrs1 + ':12 Hjørring 1';
+                        updater1;
+                        if (hrs1 + 1 > 0 < 2 && mns1 > 11)
+                            element1.innerHTML = '01:12 Hjørring 1';
+                        if (hrs1 < 1 && mns1 < 8)
+                        {
+                            element1.innerHTML = hrs1 + ':08 Aarhus H 3';
+                            updater1;
+                        }
+                    }
+                    if (hrs1 > 4 < 20 && mns1 > 41 < 57)
+                    {
+                        element1.innerHTML = hrs1 + ':57&nbsp Cph Airport &#9992&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp4';
+                        updater1;
+                    }
+                    if (mns1 > 56)
+                        element1.innerHTML = hrs1 + ':12 &nbsp; Frederikshavn &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1';
+                    if (hrs1 + 1 > 20 < 23 && mns1 > 41)
+                        element1.innerHTML = hrs1 + ':46&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Aarhus H&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3';
+                    if (hrs1 < 23 && mns1 > 27)
+                        element1.innerHTML = hrs1 + ':35 &nbsp;&nbsp;&nbsp;&nbsp; Skørping &nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3';
+                    if (hrs1 < 19 && mns1 > 34)
+                        element1.innerHTML = hrs1 + ':42&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Hjørring &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1';
+                    if (hrs1 < 21 && mns1 > 41)
+                        element1.innerHTML = hrs1 + ':46 &nbsp; &nbsp;&nbsp;Cph Airport&nbsp;&#9992;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4';
+                    if (hrs1 < 23 && mns1 > 45)
+                        element1.innerHTML = hrs1 + ':57 &nbsp; København H &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3';
+					if (hrs1 < 13 && mns1 > 45)
+					    element1.innerHTML = hrs1 + ':57 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Slagelse&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4';
+                    if (mns1 > 56)
+                    {
+                        element1.innerHTML = hrs1+1+ ':12 &nbsp; Frederikshavn &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1';
+                    }
+                    if (mns1 < 18 && hrs1 > 4 < 20)
+                        element1.innerHTML = hrs1 + ':18 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Odense 4';
+                    if (mns1 < 28 && hrs1 > 4 < 20)
+                        element1.innerHTML = hrs1 + ':28 &nbsp; Aarhus &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3';
+                    if (mns1 < 12 && hrs1 < 21)
+                        element1.innerHTML = hrs1 + ':12 &nbsp; Frederikshavn &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1';
+                    if (hrs1 > 20 && mns1 > 8)
+                        element1.innerHTML = hrs1 + ':12 Hjørring 1';
+                    document.getElementById('updater1').innerHTML = element1.innerHTML;
+                }
+            </script>
+        </h3>
+        <h4></h4>
+        <h3></h3>
+        <h4></h4>
+        <h3></h3>
+        <h4></h4>
+        <h3></h3>
+        <h4></h4>
+        <h3></h3>
+    </div>
+</body>
+
+</html>
